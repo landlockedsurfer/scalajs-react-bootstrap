@@ -13,8 +13,8 @@ object ReactBootstrapApp extends JSApp {
     import japgolly.scalajs.react.vdom.all._
 
     val AlertMessage = ReactComponentB[String]("AlertMessage").render(
-      msg => div(msg) // working fine
-//      msg => bootStrap.Alert()(msg) // getting error: Uncaught TypeError: Cannot read property '__reactAutoBindMap' of undefined
+//      msg => div(msg) // working fine
+      msg => bootStrap.Alert()(msg) // getting error: Uncaught TypeError: Cannot read property '__reactAutoBindMap' of undefined
     ).build
 
     val element = document.getElementById("content")
